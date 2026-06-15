@@ -13,7 +13,7 @@ int main()
             cnt+=a-b;
             break;
         }else{
-            if(a==b/2){
+            if(a==(b+1)/2){
                 cnt++;
                 break;
             }else if(a>b/2){

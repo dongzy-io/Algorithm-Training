@@ -2,6 +2,7 @@
 using namespace std;
 
 int op[3]={1,-1,2};
+bool isVisited[1000];
 
 int main()
 {
@@ -9,6 +10,8 @@ int main()
     cin.tie(NULL);
     int a,b;
     cin>>a>>b;
+    memset(isVisited,0,sizeof(isVisited));
+    isVisited[a]=true;
     int ans=numeric_limits<int>::max();
     queue<pair<int,int>> path; //pos steps
     path.emplace(a,0);
@@ -25,10 +28,16 @@ int main()
             continue;
         }
         for(int i=0;i<3;i++){
+            int temp;
             if(i!=2){
-                path.emplace(pos+op[i],steps+1);
-            }else   
-                path.emplace(pos*2,steps+1);
+                temp=pos+op[i];
+            }else{
+                temp=pos*2;
+            }
+            if(!isVisited[temp]){
+                isVisited[temp]=true;
+                path.emplace(temp,steps+1);
+            }
         }
     }
     cout<<ans;
