@@ -8,16 +8,16 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
-    int T=5;
+    int T=1;
     while(T--){
         int a,b;
-        /*random_device rd;
+        random_device rd;
         mt19937 gen(rd());
-        uniform_int_distribution<> dis(-100,100);
+        uniform_int_distribution<> dis(0,100);
         a=dis(gen);
         b=dis(gen);
-        cout<<a<<" "<<b<<" ";*/
-        cin>>a>>b;
+        cout<<a<<" "<<b<<" ";
+        //cin>>a>>b;
         int b_temp=b;
         int ans=numeric_limits<int>::max();
         queue<pair<int,int>> path; //pos steps
