@@ -19,7 +19,7 @@ int partition(int left,int right)
     return i;
 }
 
-int randomizedPartition(int left, int right )
+int randomizedPartition(int left, int right)
 {
     random_device rd;
     mt19937 gen(rd());

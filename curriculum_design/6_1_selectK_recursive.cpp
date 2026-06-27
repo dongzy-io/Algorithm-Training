@@ -54,9 +54,9 @@ int main()
         cin>>x;
     }
     cout<<quickselect(nums,0,n-1,K-1)<<'\n';
-    for(auto x: nums){
+    /*for(auto x: nums){
         cout<<x<<" ";
-    }
+    }*/
     for(int i=0;i<K;i++){
         sum+=nums[i];
     }
