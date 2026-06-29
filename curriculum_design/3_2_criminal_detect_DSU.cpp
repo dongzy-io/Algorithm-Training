@@ -7,7 +7,7 @@ class DSU{
         vector<int> fa;
     public:
         DSU(int N){
-            fa.resize(N);
+            fa.resize(N+1);
             for(int i=1;i<=N;i++){
                 fa[i]=i;
             }
