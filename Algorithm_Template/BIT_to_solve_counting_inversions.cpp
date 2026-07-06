@@ -12,7 +12,7 @@ void discrete(vector<int> &origin, vector<int> &discreted)
     sort(temp.begin(),temp.end());
     temp.erase(unique(temp.begin(),temp.end()));
     for(auto x: origin){
-        int rank=lower_bound(temp.begin(),temp.end(),x)-temp.begin()+1;
+        int rank=lower_bound(temp.begin(),temp.end(),x)-temp.begin()+1;//ranked 1,2,3......
         discreted.emplace_back(rank);
     }
 }
