@@ -23,9 +23,9 @@ int main()
         for(int i=0;i<n-4;i++){
             if(!loves[i].second){
                 record[loves[i].first]++;
-                if(loves[i].first==loves[i+2].first)
+                if(i+2<n-4&&loves[i].first==loves[i+2].first)
                     loves[i+2].second=true;
-                if(loves[i].first==loves[i+4].first)
+                if(i+4<n-4&&loves[i].first==loves[i+4].first)
                     loves[i+4].second=true;
             }
         } 
