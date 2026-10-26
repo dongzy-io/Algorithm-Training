@@ -24,11 +24,13 @@ int main()
         cin>>n>>m>>k;
         vector<vector<bool>> isOne(n,vector<bool>(k,false));
         vector<ll> bit_cnt(k);
+        vector<tuple<int,int,int>> queries;
         while(m--){
             int i,j,w;
             cin>>i>>j>>w;
             i--;
             j--;
+            queries.emplace_back(i,j,w);
             for(int k=0;w>0;k++){
                 if(w&1){
                     if(!isOne[i][k]){
@@ -42,6 +44,10 @@ int main()
                 }
                 w/=2;
             }
+        }
+        for(auto [i,j,val]: queries){
+            ll res=0;
+            
         }
         for(int i=0;i<k;i++){
             ans+=bit_cnt[i]*power(i);
