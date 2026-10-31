@@ -33,16 +33,20 @@ void magic::setfirstmagic()
 void magic::generatemagic()
 {
     sum=m[0][0]+m[3][3];   
-    for(int i=0;i<4; i++){
-        m[i][i]=sum-m[i][i];                
-        m[i][3-i]=sum-m[i][3-i];     
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            if(i==j)
+                m[i][j]=sum-m[i][j]; 
+            if(i+j==3)               
+                m[i][j]=sum-m[i][j];
+        }         
     }
 }
 
 void magic::printmagic()
 {
-    for(int i=0; i<4;i++){
-        for(int j=0;j<4; j++)
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++)
             cout<<setw(4)<<m[i][j];
         cout<<"\n";
     }

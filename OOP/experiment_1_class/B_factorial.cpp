@@ -46,7 +46,7 @@ int main()
         cin>>x;
         f.set_origin_num(x);
     }
-    for(auto &f: nums){
+    for(const auto &f: nums){
         cout<<f.get_fac()<<" ";
     }
     return 0;
