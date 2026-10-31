@@ -34,9 +34,8 @@ void magic::generatemagic()
 {
     sum=m[0][0]+m[3][3];   
     for(int i=0;i<4; i++){
-        m[i][i]=sum-m[i][i];             
-        if(i!=3-i)                          
-            m[i][3-i]=sum-m[i][3-i];     
+        m[i][i]=sum-m[i][i];                
+        m[i][3-i]=sum-m[i][3-i];     
     }
 }
 
