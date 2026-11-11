@@ -8,17 +8,17 @@ class fac
     private:
         int origin_num;
         ll factorial;
-    public:
-        fac(int x=0): origin_num(x) {
-            calc();
-        }
-        
+
         void calc(){
             factorial=1;
             for(int i=2;i<=origin_num;i++){
                 factorial*=i;
             }
-        }        
+        } 
+    public:
+        fac(int x=0): origin_num(x) {
+            calc();
+        }
 
         int get_origin_num() const{
             return origin_num;
@@ -45,6 +45,7 @@ int main()
         int x;
         cin>>x;
         f.set_origin_num(x);
+        //f(x);
     }
     for(const auto &f: nums){
         cout<<f.get_fac()<<" ";

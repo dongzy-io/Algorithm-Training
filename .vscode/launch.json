@@ -2,6 +2,27 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Stars",
+            "request": "launch",
+            "mainClass": "java_code.Stars",
+            "projectName": "Algorithm-Training_5bbee6bb"
+        },
+        {
+            "type": "java",
+            "name": "Stars",
+            "request": "launch",
+            "mainClass": "java_code.experiment1.Stars",
+            "projectName": "Algorithm-Training_5bbee6bb"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "java_code.test",
+            "projectName": "Algorithm-Training_5bbee6bb"
+        },
+        {
             "name": "WSL C++ GDB 调试",
             "type": "cppdbg",
             "request": "launch",

@@ -40,8 +40,9 @@ int main()
     Coordinate p2(p1);
     Coordinate p3=p2;//copy initialization
     cout<<"p3=("<<p3.getx()<<","<<p3.gety()<<")\n";
-    Coordinate p4;
-    Coordinate p5(2);//lack arg? or rvalue unmatched
+    //Coordinate p4;
+    //Coordinate p5(2);//lack arg? or rvalue unmatched
+    Coordinate p4={2,3};
     return 0;
 }
 
