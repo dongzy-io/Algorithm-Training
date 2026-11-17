@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CarTest",
+            "request": "launch",
+            "mainClass": "java_code.CarTest",
+            "projectName": "Algorithm-Training_5bbee6bb"
+        },
+        {
+            "type": "java",
+            "name": "commodity_system",
+            "request": "launch",
+            "mainClass": "java_code.commodity_system",
+            "projectName": "Algorithm-Training_5bbee6bb"
+        },
+        {
+            "type": "java",
+            "name": "Employee",
+            "request": "launch",
+            "mainClass": "java_code.Employee",
+            "projectName": "Algorithm-Training_5bbee6bb"
+        },
+        {
+            "type": "java",
             "name": "Stars",
             "request": "launch",
             "mainClass": "java_code.Stars",
