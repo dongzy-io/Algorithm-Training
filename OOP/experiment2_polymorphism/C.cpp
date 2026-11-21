@@ -22,7 +22,7 @@ class cube : public container
         double surface_area() override { 
             return 6.0*radius*radius; 
         }
-        double volume(){
+        double volume()override {
             return radius*radius*radius; 
         }
 };
@@ -33,10 +33,10 @@ class sphere : public container
 {           
     public:
         sphere(double r) : container(r) {}
-        double surface_area() { 
+        double surface_area() override{ 
             return 4*PI*radius*radius; 
         }
-        double volume() { 
+        double volume() override{ 
             return 4.0/3*PI*radius*radius*radius; 
         }
 };
@@ -45,13 +45,12 @@ class cylinder : public container
 {        
     private:
         double height;
-
     public:
         cylinder(double r, double h) : container(r), height(h) {}
-        double surface_area(){
+        double surface_area() override{
             return 2*PI*radius*(radius+height); 
         }
-        double volume(){ 
+        double volume() override{ 
             return PI*radius*radius*height; 
         }
 };
