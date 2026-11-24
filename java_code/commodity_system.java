@@ -1,4 +1,5 @@
-package java_code; 
+package java_code;
+import java.util.Objects;
 
 public class commodity_system{
     static class Product{
@@ -14,11 +15,19 @@ public class commodity_system{
             this.piece_num=piece_num;
             this.manufacturer=manufacturer;
         }
-        public String toString() { return name+"\t"+price+"$\t"+mass+"g\t"+"has "+piece_num+" pieces\t";}
-        boolean equals(Product other){
-            return this.name.equals(other.name)&&this.manufacturer.equals(other.manufacturer)&&
-                   this.price==other.price&&this.mass==other.mass&&
-                   this.piece_num==other.piece_num;
+        @Override
+        public String toString() {
+            return name+"\t"+price+"$\t"+mass+"g\t"+"has "+piece_num+" pieces\t"+manufacturer;
+        }
+        @Override
+        public boolean equals(Object obj){
+            if(this==obj) return true;
+            if(obj==null||getClass()!=obj.getClass()) 
+                return false;
+            Product other=(Product)obj;
+            return Objects.equals(name, other.name)&&Objects.equals(manufacturer, other.manufacturer)&&
+                   Double.compare(price, other.price)==0&&Double.compare(mass, other.mass)==0&&
+                   piece_num==other.piece_num;
         }
     }
 
@@ -34,5 +43,7 @@ public class commodity_system{
             System.out.println("DIFFERENT");
         if(A.equals(C))
             System.out.println("SAME");
+        else
+            System.out.println("DIFFERENT");
     }
 }
