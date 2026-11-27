@@ -1,4 +1,4 @@
-package java_code;
+package java_code.experiment1;
 import java.util.Scanner;
 
 public class Stars {

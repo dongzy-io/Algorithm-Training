@@ -1,4 +1,4 @@
-package java_code;
+package java_code.experiment2;
 import java.util.Objects;
 
 public class commodity_system{

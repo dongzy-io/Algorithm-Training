@@ -1,4 +1,4 @@
-package java_code;
+package java_code.experiment2;
 
 abstract class Car {
     int maxSpeed;   
