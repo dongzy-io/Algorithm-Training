@@ -1,5 +1,4 @@
 package cinema;
-
 import java.io.Serializable;
 
 /** A sold ticket (order line). */
@@ -14,8 +13,13 @@ public class Ticket implements Serializable {
     private boolean refunded;
 
     public Ticket(int id, int screeningId, int row, int col, String buyer, TicketType type, double price) {
-        this.id = id; this.screeningId = screeningId; this.row = row; this.col = col;
-        this.buyer = buyer; this.type = type; this.price = price;
+        this.id=id; 
+        this.screeningId=screeningId; 
+        this.row=row; 
+        this.col=col;
+        this.buyer=buyer; 
+        this.type=type; 
+        this.price=price;
     }
     public int getId() { return id; }
     public int getScreeningId() { return screeningId; }

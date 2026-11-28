@@ -1,21 +1,22 @@
 package cinema;
-
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.BitSet;
 
 /** One showing of a movie in a hall. Sold seats are kept in a BitSet (index = row * cols + col). */
-public class Screening implements Serializable {
+public class Screening implements Serializable{
     private static final long serialVersionUID = 1L;
     private final int id;
     private final Movie movie;
     private final Hall hall;
     private final LocalDateTime start;
     private final BitSet sold;
-
     public Screening(int id, Movie movie, Hall hall, LocalDateTime start) {
-        this.id = id; this.movie = movie; this.hall = hall; this.start = start;
-        this.sold = new BitSet(hall.capacity());
+        this.id=id; 
+        this.movie=movie; 
+        this.hall=hall; 
+        this.start=start;
+        this.sold=new BitSet(hall.capacity());
     }
     public int getId() { return id; }
     public Movie getMovie() { return movie; }

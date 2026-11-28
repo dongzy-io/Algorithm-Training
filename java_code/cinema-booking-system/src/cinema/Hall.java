@@ -11,11 +11,6 @@ public class Hall implements Serializable {
     private final HallType type;
     private final int rows, cols;
     private final Seat[][] seats;
-
-    /**
-     * Builds a hall. Rows vipRowFrom..vipRowTo (0-based, inclusive), without the two outer columns
-     * on each side, are VIP seats; every other seat is a normal seat.
-     */
     public Hall(int id, int cinemaId, String name, HallType type, int rows, int cols, int vipRowFrom, int vipRowTo) {
         this.id=id; 
         this.cinemaId=cinemaId; 

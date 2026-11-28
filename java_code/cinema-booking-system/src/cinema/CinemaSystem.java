@@ -14,9 +14,9 @@ public class CinemaSystem implements Serializable {
 
     private LocalDateTime now;                                                 // simulated current time
     private final City city;
-    private final List<Movie> movies = new ArrayList<>();
-    private final List<Cinema> cinemas = new ArrayList<>();
-    private final List<Hall> halls = new ArrayList<>();
+    private final List<Movie> movies=new ArrayList<>();
+    private final List<Cinema> cinemas=new ArrayList<>();
+    private final List<Hall> halls=new ArrayList<>();
     private final List<Screening> screenings = new ArrayList<>();               // sorted by start time
     private final Map<Integer, List<Screening>> hallSchedule = new HashMap<>();  // hall id -> sorted list
     private final Map<Integer, List<Screening>> movieIndex = new HashMap<>();    // movie id -> sorted list
@@ -80,7 +80,10 @@ public class CinemaSystem implements Serializable {
     public int newTicketId() { return nextTicketId++; }
     public void addMovie(Movie m) { movies.add(m); }
     public void addCinema(Cinema c) { cinemas.add(c); }
-    public void addHall(Hall h) throws NotFoundException { halls.add(h); getCinema(h.getCinemaId()).getHalls().add(h); }
+    public void addHall(Hall h) throws NotFoundException { 
+        halls.add(h); 
+        getCinema(h.getCinemaId()).getHalls().add(h); 
+    }
     public void putTicket(Ticket t) { tickets.put(t.getId(), t); }
 
     /** Inserts a screening into all sorted structures at the position found by binary search. */

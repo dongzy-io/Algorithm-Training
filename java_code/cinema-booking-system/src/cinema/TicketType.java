@@ -7,7 +7,9 @@ public enum TicketType {
 
     private final String label;
     private final double rate;
-    TicketType(String label, double rate) { this.label = label; this.rate = rate; }
+    TicketType(String label, double rate) { 
+        this.label=label; this.rate=rate; 
+    }
     public String getLabel() { return label; }
     public double getRate() { return rate; }
 }
